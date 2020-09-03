@@ -14,20 +14,27 @@ namespace AboutMe
             int age = Convert.ToInt16(Console.ReadLine());
 
             Console.WriteLine("\nAre you alive?");
-            Boolean alive = Convert.ToString(Console.ReadLine());
-            Boolean dead = Convert.ToString(Console.ReadLine());
+            bool alive = true;
+            bool dead = false;
+            alive = bool.Parse(Console.ReadLine());
+
 
             Console.WriteLine("\nWhat is your Name?\n" + name);
             Console.WriteLine("\nHow old are you?\n" + age);
 
-            if (alive = true)
+            if (alive)
             {
+                Console.WriteLine("\nWhat is your Name?\n" + name);
+                Console.WriteLine("\nHow old are you?\n" + age);
                 Console.WriteLine("\nAre you alive?\n" + alive);
+
             }
            
-            else if(alive = false)
+            else
             {
+                Console.WriteLine("\nWhat is your Name?\n" + name);
                 Console.WriteLine("\nAre you alive?\n" + dead);
+                Console.WriteLine("\nHow old are you?\n" + age);
             }
             
 
