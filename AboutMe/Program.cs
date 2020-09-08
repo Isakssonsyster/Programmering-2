@@ -19,9 +19,6 @@ namespace AboutMe
             alive = bool.Parse(Console.ReadLine());
 
 
-            Console.WriteLine("\nWhat is your Name?\n" + name);
-            Console.WriteLine("\nHow old are you?\n" + age);
-
             if (alive)
             {
                 Console.WriteLine("\nWhat is your Name?\n" + name);
