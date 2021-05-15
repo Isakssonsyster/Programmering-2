@@ -17,7 +17,7 @@ namespace WPF_Slutprojekt_Quiz
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class WindowROCK : Window
+    public partial class WindowROCK : Window  //Har exakt samma kod som i WindowPOP, förutom att frågorna och svaren är annorlunda
     {
         List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 

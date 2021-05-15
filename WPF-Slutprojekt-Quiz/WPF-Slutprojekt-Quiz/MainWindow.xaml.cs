@@ -18,7 +18,7 @@ namespace WPF_Slutprojekt_Quiz
     /// <summary>
     /// Interaction logic for Window2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window   // Klassen är till för meny fönstret där man kan välja vilken genre man vill spela
     {
         public MainWindow()
         {
@@ -29,8 +29,8 @@ namespace WPF_Slutprojekt_Quiz
         private void POP(object sender, RoutedEventArgs e)
         {
 
-            WindowPOP windowPOP = new WindowPOP();
-            windowPOP.ShowDialog();
+            WindowPOP windowPOP = new WindowPOP();   
+            windowPOP.ShowDialog();  //Tar dig till WindowPOP alltså fönstret där man kan gissa på vilka poplåtar det är
 
         }
 
@@ -38,7 +38,7 @@ namespace WPF_Slutprojekt_Quiz
         {
 
             WindowRAP windowRAP = new WindowRAP();
-            windowRAP.ShowDialog();
+            windowRAP.ShowDialog();  //Tar dig till WindowRAP alltså fönstret där man kan gissa på vilka rapplåtar det är
 
         }
 
@@ -46,7 +46,7 @@ namespace WPF_Slutprojekt_Quiz
         {
 
             WindowROCK windowROCK = new WindowROCK();
-            windowROCK.ShowDialog();
+            windowROCK.ShowDialog();  //Tar dig till WindowROCK alltså fönstret där man kan gissa på vilka rocklåtar det är
 
         }
     }

@@ -17,54 +17,54 @@ namespace WPF_Slutprojekt_Quiz
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class WindowPOP : Window
+    public partial class WindowPOP : Window   //Klassen är till för att göra frågorna och hur det ska fungera för pop fönstret
     {
 
-        List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; //List över numren på frågorna
 
-        int qNum = 0;
+        int qNum = 0;  //Värdet på hur många frågor som frågats
 
-        int i;
+        int i; 
 
-        int score;
+        int score; //Variabel för vilken score spelaren är på
 
-        public WindowPOP()
+        public WindowPOP()  
         {
             InitializeComponent();
             startGame();
             nextQuestion();
         }
 
-        private void checkAnswer(object sender, RoutedEventArgs e)
+        private void checkAnswer(object sender, RoutedEventArgs e) 
         {
 
-            Button senderButton = sender as Button;
+            Button senderButton = sender as Button; //Gör knapparna till en sender
 
-            if (senderButton.Tag.ToString() == "1")
+            if (senderButton.Tag.ToString() == "1") 
             {
-                score++;
+                score++;  //Om Tag i knappen är ett kommer score numret att öka med ett
             }
 
             if (qNum < 0)
             {
-                qNum = 0;
+                qNum = 0; // Om frågenumret som spelaren är på är mindre än 0 kommer qNum vara 0
             }
             else
             {
-                qNum++;
+                qNum++; //Annars ökas det med ett.
             }
 
-            scoreText.Content = "  " + score + "/" + questionNumbers.Count;
+            scoreText.Content = "  " + score + "/" + questionNumbers.Count;  //Kommer skriva ut efter man svarat på frågan hur många poämg av 10 som man har
 
-            nextQuestion();
+            nextQuestion(); //Spelar upp nästa fråga
 
         }
 
-        private void restartGame()
+        private void restartGame() //Startar om spelet genom att score blir 0, qNum går tillbaka med minus 1 och i blir 0, sedan spelas spelet om.
         {
-            score = 0;
+            score = 0;  
             qNum = -1;
-            i = 0;
+            i = 0;  
 
             startGame();
         }
@@ -74,20 +74,20 @@ namespace WPF_Slutprojekt_Quiz
 
             if (qNum < questionNumbers.Count)
             {
-                i = questionNumbers[qNum];
+                i = questionNumbers[qNum]; //Om frågan den är på är mindre än antalet frågor, skrivs en ny fråga ut
             }
             else
             {
-                restartGame();
+                restartGame(); //Annars spelas spelet om
             }
 
             foreach (var x in myCanvas.Children.OfType<Button>())
             {
-                x.Tag = "0";
-                x.Background = Brushes.Lavender;
+                x.Tag = "0";  //Nya knappar ska ha Tags tillbaka till 0
+                x.Background = Brushes.Lavender;  //Sätter färgerna på knapparna till Lavender
             }
 
-            switch (i)
+            switch (i) //Vilka frågor som finns i spelet, svaren som finns och sedan vilken av frågorna som är rätt, alltså vilken som har en Tag på 1
             {
                 case 1:
 
@@ -215,16 +215,16 @@ namespace WPF_Slutprojekt_Quiz
         private void startGame()
         {
 
-            var randomList = questionNumbers.OrderBy(a => Guid.NewGuid()).ToList();
+            var randomList = questionNumbers.OrderBy(a => Guid.NewGuid()).ToList(); //Gör frågenumrena till en randomized lista
 
             questionNumbers = randomList;
 
-            questionOrder.Content = null;
+            questionOrder.Content = null; 
 
 
             for (int i = 0; i < questionNumbers.Count; i++)
             {
-                questionOrder.Content += " " + questionNumbers[i].ToString();
+                questionOrder.Content += " " + questionNumbers[i].ToString(); //Skriver ut den Randomized listan
 
             }
 
