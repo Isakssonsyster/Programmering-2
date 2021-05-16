@@ -34,7 +34,7 @@ namespace WPF_Slutprojekt_Quiz
             nextQuestion();
         }
 
-        private void checkAnswerRap(object sender, RoutedEventArgs e)
+        private void checkAnswerRock(object sender, RoutedEventArgs e)
         {
 
             Button senderButton = sender as Button;
@@ -53,7 +53,7 @@ namespace WPF_Slutprojekt_Quiz
                 qNum++;
             }
 
-            scoreTextRap.Content = "  " + score + "/" + questionNumbers.Count;
+            scoreTextRock.Content = "  " + score + "/" + questionNumbers.Count;
 
             nextQuestion();
 
@@ -91,7 +91,7 @@ namespace WPF_Slutprojekt_Quiz
             {
                 case 1:
 
-                    questionTxtRap.Text = "Can't tell if this is true or dream";
+                    questionTxtRock.Text = "Can't tell if this is true or dream";
 
                     an1.Content = "Sweet Child O' Mine - Guns N' Roses";
                     an2.Content = "One - Metallica";
@@ -103,7 +103,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 2:
 
-                    questionTxtRap.Text = "'Cause I'm cut deep, my heart won't beat";
+                    questionTxtRock.Text = "'Cause I'm cut deep, my heart won't beat";
 
                     an1.Content = "I Need Help - Papa Roach";
                     an2.Content = "Never Too Late - Three Days Grace";
@@ -115,7 +115,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 3:
 
-                    questionTxtRap.Text = "Started with a kick and punch, A claw to the face";
+                    questionTxtRock.Text = "Started with a kick and punch, A claw to the face";
 
                     an1.Content = "Human Race - Three Days Grace";
                     an2.Content = "Last Resort - Papa Roach";
@@ -127,7 +127,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 4:
 
-                    questionTxtRap.Text = "Falling further and further away, Getting closer every day";
+                    questionTxtRock.Text = "Falling further and further away, Getting closer every day";
 
                     an1.Content = "The Diary Of Jane - Breaking Benjamin";
                     an2.Content = "Gone Forever - Three Days Grace";
@@ -139,7 +139,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 5:
 
-                    questionTxtRap.Text = "No stop signs, Speed limit";
+                    questionTxtRock.Text = "No stop signs, Speed limit";
 
                     an1.Content = "Lydia - Highly Suspect";
                     an2.Content = "Highway To Hell - ACDC";
@@ -151,7 +151,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 6:
 
-                    questionTxtRap.Text = "I was an ocean, lost in the open";
+                    questionTxtRock.Text = "I was an ocean, lost in the open";
 
                     an1.Content = "Throne - Bring Me The Horizon";
                     an2.Content = "Bring Me To Life - Evanescenes";
@@ -163,7 +163,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 7:
 
-                    questionTxtRap.Text = "How can you see into my eyes, like open doors";
+                    questionTxtRock.Text = "How can you see into my eyes, like open doors";
 
                     an1.Content = "Going Under - Evanescenes";
                     an2.Content = "Bring Me To Life - Evanescenes";
@@ -175,7 +175,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 8:
 
-                    questionTxtRap.Text = "Take my hand, We're off to never-never land, yeah";
+                    questionTxtRock.Text = "Take my hand, We're off to never-never land, yeah";
 
                     an1.Content = "Enter Sandman - Metallica ";
                     an2.Content = "I Need Help - Papa Roach";
@@ -187,7 +187,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 9:
 
-                    questionTxtRap.Text = "I've seen better days So unafraid in my youth";
+                    questionTxtRock.Text = "I've seen better days So unafraid in my youth";
 
                     an1.Content = "Pain - Three Days Grace";
                     an2.Content = "Lydia - Highly Suspect";
@@ -199,7 +199,7 @@ namespace WPF_Slutprojekt_Quiz
 
                 case 10:
 
-                    questionTxtRap.Text = "You're sick of feeling numb, You're not the only one";
+                    questionTxtRock.Text = "You're sick of feeling numb, You're not the only one";
 
                     an1.Content = "Carry On Wayward Son - Kansas";
                     an2.Content = "The Diary Of Jane - Breaking Benjamin";
@@ -219,12 +219,12 @@ namespace WPF_Slutprojekt_Quiz
 
             questionNumbers = randomList;
 
-            questionOrderRap.Content = null;
+            questionOrderRock.Content = null;
 
 
             for (int i = 0; i < questionNumbers.Count; i++)
             {
-                questionOrderRap.Content += " " + questionNumbers[i].ToString();
+                questionOrderRock.Content += " " + questionNumbers[i].ToString();
 
             }
 

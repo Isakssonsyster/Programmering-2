@@ -8,13 +8,13 @@
         Title="Window1" Height="600" Width="800">
     <Canvas Name="myCanvasRap" Background="Beige">
 
-        <Label Name="scoreTextRap" FontSize="18">Score: 0/10</Label>
-        <Label Name="questionOrderRap" FontSize="18" Canvas.Left="362">Questions</Label>
+        <Label Name="scoreTextRock" FontSize="18">Score: 0/10</Label>
+        <Label Name="questionOrderRock" FontSize="18" Canvas.Left="362">Questions</Label>
 
-        <TextBlock Name="questionTxtRap" TextAlignment="Center" Padding="3" FontSize="20" Width="572" TextWrapping="Wrap" Canvas.Left="111" Canvas.Top="101">Where the grass is green and the girls are pretty</TextBlock>
+        <TextBlock Name="questionTxtRock" TextAlignment="Center" Padding="3" FontSize="20" Width="572" TextWrapping="Wrap" Canvas.Left="111" Canvas.Top="101">Where the grass is green and the girls are pretty</TextBlock>
 
-        <Button Background="LightGreen" FontSize="18" Click="checkAnswerRap" Name="an1" Width="443" Height="50" Content="Paradise City - Guns N' Roses" Tag="1" Canvas.Left="186" Canvas.Top="178"/>
-        <Button Background="LightGreen" FontSize="18" Click="checkAnswerRap" Name="an2" Width="443" Height="50" Content="Highway To Hell - ACDC" Tag="0" Canvas.Left="186" Canvas.Top="269"/>
-        <Button Background="LightGreen" FontSize="18" Click="checkAnswerRap" Name="an3" Width="443" Height="50" Content="One - Metallica" Tag="0" Canvas.Left="186" Canvas.Top="362"/>
+        <Button Background="LightGreen" FontSize="18" Click="checkAnswerRock" Name="an1" Width="443" Height="50" Content="Paradise City - Guns N' Roses" Tag="1" Canvas.Left="186" Canvas.Top="178"/>
+        <Button Background="LightGreen" FontSize="18" Click="checkAnswerRock" Name="an2" Width="443" Height="50" Content="Highway To Hell - ACDC" Tag="0" Canvas.Left="186" Canvas.Top="269"/>
+        <Button Background="LightGreen" FontSize="18" Click="checkAnswerRock" Name="an3" Width="443" Height="50" Content="One - Metallica" Tag="0" Canvas.Left="186" Canvas.Top="362"/>
     </Canvas>
 </Window>
